@@ -1,22 +1,20 @@
 package core.figuren;
 
-import game.Feld;
-
 import java.util.ArrayList;
 
 public abstract class Figur {
 
-    private String farbe;
+    private String color;
     private boolean isDead;
 
     public abstract ArrayList<int[][]> getPossibleMoves();
 
-    public String getFarbe() {
-        return farbe;
+    public String getColor() {
+        return color;
     }
 
-    public void setFarbe(String farbe) {
-        this.farbe = farbe;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public boolean isDead() {
