@@ -1,6 +1,5 @@
 package core.figuren;
 
-import api.Moveable;
 import game.Feld;
 
 import java.util.ArrayList;
