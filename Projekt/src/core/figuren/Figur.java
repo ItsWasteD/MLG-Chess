@@ -7,6 +7,11 @@ public abstract class Figur {
     private String color;
     private boolean isDead;
 
+    public Figur(String color) {
+        this.color = color;
+        this.isDead = false;
+    }
+
     public abstract ArrayList<int[][]> getPossibleMoves();
 
     public String getColor() {
