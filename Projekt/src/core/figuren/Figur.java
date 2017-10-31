@@ -5,17 +5,26 @@ import game.Feld;
 
 import java.util.ArrayList;
 
-public abstract class Figur implements Moveable {
+public abstract class Figur {
 
-    private Feld feld;
     private String farbe;
     private boolean isDead;
 
-    @Override
-    public boolean moveTo(int x, int y) {
+    public abstract ArrayList<int[][]> getPossibleMoves();
 
-        return false;
+    public String getFarbe() {
+        return farbe;
     }
 
-    public abstract ArrayList<int[][]> getPossibleMoves();
+    public void setFarbe(String farbe) {
+        this.farbe = farbe;
+    }
+
+    public boolean isDead() {
+        return isDead;
+    }
+
+    public void setDead(boolean dead) {
+        isDead = dead;
+    }
 }
