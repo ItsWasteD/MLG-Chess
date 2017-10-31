@@ -4,9 +4,11 @@ import core.figuren.Figur;
 
 public class FigurController {
 
-    private void movefigur(Figur figur,int x,int y){
+    public void movefigur(Figur figur,int x,int y){
 
     }
+    public void deleteFigur(Figur figur){
 
 
+    }
 }
