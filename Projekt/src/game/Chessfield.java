@@ -49,7 +49,4 @@ public class Chessfield {
         this.field = field;
     }
 
-    public static void main(String[] args) {
-        new Chessfield().createEmptyField();
-    }
 }
