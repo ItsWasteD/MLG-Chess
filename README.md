@@ -1,1 +1,1 @@
-"# MLG-Chess" 
+# MLG-Chess 
