@@ -1,4 +1,4 @@
-package figuren;
+package gui.figuren;
 
 public class BasicFigur {
 
