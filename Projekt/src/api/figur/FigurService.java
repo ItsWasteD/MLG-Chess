@@ -14,7 +14,7 @@ public class FigurService {
         figurController.movefigur(figur, x, y);
     }
 
-    private void deleteFigur(Figur figur){
+    private void deleteFigur(Figur figur) {
 
 
     }
