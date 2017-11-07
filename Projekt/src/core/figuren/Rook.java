@@ -19,11 +19,11 @@ public class Rook extends Figur {
         possibleMoves.clear();
         //all possible moves in the up
         for (int i = row + 1; i < Chessfield.SIZE; i++) {
-            Field square = super.getPosition().getField(i, column);
-            if (square.getFigur() == null) {
-                possibleMoves.add(square);
-            } else if (isOpponent(square.getFigur())) {
-                possibleMoves.add(square);
+            Field field = super.getPosition().getField(i, column);
+            if (field.getFigur() == null) {
+                possibleMoves.add(field);
+            } else if (isOpponent(field.getFigur())) {
+                possibleMoves.add(field);
                 break;
             } else {
                 break;
@@ -31,11 +31,11 @@ public class Rook extends Figur {
         }
         //all possible moves in the down
         for (int i = row - 1; i > -1; i--) {
-            Field square = super.getPosition().getField(i, column);
-            if (square.getFigur() == null) {
-                possibleMoves.add(square);
-            } else if (isOpponent(square.getFigur())) {
-                possibleMoves.add(square);
+            Field field = super.getPosition().getField(i, column);
+            if (field.getFigur() == null) {
+                possibleMoves.add(field);
+            } else if (isOpponent(field.getFigur())) {
+                possibleMoves.add(field);
                 break;
             } else {
                 break;
@@ -43,11 +43,11 @@ public class Rook extends Figur {
         }
         //all possible moves to the right
         for (int i = column + 1; i < Chessfield.SIZE; i++) {
-            Field square = super.getPosition().getField(row, i);
-            if (square.getFigur() == null) {
-                possibleMoves.add(square);
-            } else if (isOpponent(square.getFigur())) {
-                possibleMoves.add(square);
+            Field field = super.getPosition().getField(row, i);
+            if (field.getFigur() == null) {
+                possibleMoves.add(field);
+            } else if (isOpponent(field.getFigur())) {
+                possibleMoves.add(field);
                 break;
             } else {
                 break;
@@ -55,11 +55,11 @@ public class Rook extends Figur {
         }
         //all possible moves to the left
         for (int i = column - 1; i > -1; i--) {
-            Field square = super.getPosition().getField(row, i);
-            if (square.getFigur() == null) {
-                possibleMoves.add(square);
-            } else if (isOpponent(square.getFigur())) {
-                possibleMoves.add(square);
+            Field field = super.getPosition().getField(row, i);
+            if (field.getFigur() == null) {
+                possibleMoves.add(field);
+            } else if (isOpponent(field.getFigur())) {
+                possibleMoves.add(field);
                 break;
             } else {
                 break;
