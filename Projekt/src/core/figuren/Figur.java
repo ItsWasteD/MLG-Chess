@@ -23,7 +23,7 @@ public abstract class Figur {
         return isWhite;
     }
 
-    public void setIsWhite(boolean isWhite) {
+    public void setWhite(boolean isWhite) {
         this.isWhite = isWhite;
     }
 
