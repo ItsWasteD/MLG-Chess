@@ -7,9 +7,7 @@ import java.util.ArrayList;
 
 public class Pawn extends Figur {
 
-    private ArrayList<Field> possibleMoves;
-
-    public Pawn(boolean color, ArrayList<Field> possibleMoves) {
+    public Pawn(boolean color) {
         super(color);
         this.possibleMoves = getPossibleMoves();
     }

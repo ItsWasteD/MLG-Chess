@@ -12,6 +12,23 @@ public class Knight extends Figur {
 
     @Override
     public ArrayList<Field> getPossibleMoves() {
-        return null;
+        possibleMoves.clear();
+        int[][] offsets = {
+                {-2, 1},
+                {-1, 2},
+                {1, 2},
+                {2, 1},
+                {2, -1},
+                {1, -2},
+                {-1, -2},
+                {-2, -1}
+        };
+        for (int[] o : offsets) {
+            Field square = super.getPosition().getField(o[0], o[1]);
+            if (square != null && (square.getFigur() == null || isOpponent(square.getFigur()))) {
+                possibleMoves.add(square);
+            }
+        }
+        return possibleMoves;
     }
 }

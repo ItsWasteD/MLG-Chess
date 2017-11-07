@@ -10,6 +10,7 @@ public abstract class Figur {
     private boolean isDead;
     private Field position;
     private boolean opponent;
+    public ArrayList<Field> possibleMoves;
 
     public Figur(boolean isWhite) {
         this.isWhite = isWhite;
