@@ -1,7 +1,5 @@
 package game;
 
-import core.figuren.*;
-
 public class Chessfield {
 
     private Field[][] field = new Field[8][8];
@@ -14,7 +12,7 @@ public class Chessfield {
 
         createEmptyField();
 
-        field[0][0].setFigur(new Pawn("black"));
+       /* field[0][0].setFigur(new Pawn("black"));
         field[0][1].setFigur(new Knight("black"));
         field[0][2].setFigur(new Bishop("black"));
         field[0][3].setFigur(new King("black"));
@@ -30,13 +28,13 @@ public class Chessfield {
         field[7][4].setFigur(new Queen("white"));
         field[7][5].setFigur(new Bishop("white"));
         field[7][6].setFigur(new Knight("white"));
-        field[7][7].setFigur(new Pawn("white"));
+        field[7][7].setFigur(new Pawn("white"));*/
     }
 
     private void createEmptyField() {
-        for(int y = 0; y < 8; y++) {
-            for(int x = 0; x < 8; x++) {
-                this.field[y][x] = (x + y) % 2 == 0 ? new Field(null, "white") : new Field(null, "black");
+        for (int y = 0; y < 8; y++) {
+            for (int x = 0; x < 8; x++) {
+                this.field[y][x] = (x + y) % 2 == 0 ? new Field(x, y) : new Field(x, y);
             }
         }
     }

@@ -1,25 +1,29 @@
 package core.figuren;
 
+import game.Field;
+
 import java.util.ArrayList;
 
 public abstract class Figur {
 
-    private String color;
+    private boolean isWhite;
     private boolean isDead;
+    private Field position;
+    private boolean opponent;
 
-    public Figur(String color) {
-        this.color = color;
+    public Figur(boolean isWhite) {
+        this.isWhite = isWhite;
         this.isDead = false;
     }
 
-    public abstract ArrayList<int[][]> getPossibleMoves();
+    public abstract ArrayList<Field> getPossibleMoves();
 
-    public String getColor() {
-        return color;
+    public boolean isWhite() {
+        return isWhite;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setIsWhite(boolean isWhite) {
+        this.isWhite = isWhite;
     }
 
     public boolean isDead() {
@@ -28,5 +32,17 @@ public abstract class Figur {
 
     public void setDead(boolean dead) {
         isDead = dead;
+    }
+
+    public Field getPosition() {
+        return position;
+    }
+
+    public void setPosition(Field position) {
+        this.position = position;
+    }
+
+    public boolean isOpponent(Figur figur) {
+        return figur.isWhite != this.isWhite;
     }
 }

@@ -1,15 +1,17 @@
 package core.figuren;
 
+import game.Field;
+
 import java.util.ArrayList;
 
 public class Rook extends Figur {
 
-    public Rook(String color) {
-        super(color);
+    public Rook(boolean isWhite) {
+        super(isWhite);
     }
 
     @Override
-    public ArrayList<int[][]> getPossibleMoves() {
+    public ArrayList<Field> getPossibleMoves() {
         return null;
     }
 }

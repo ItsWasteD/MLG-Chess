@@ -1,33 +1,48 @@
 package core.figuren;
 
-import java.lang.reflect.Array;
+import game.Field;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class Pawn extends Figur {
 
-    private final List<int[][]> moves = new ArrayList<>();
-    private List<int[][]> possibleMoves;
+    private ArrayList<Field> possibleMoves;
 
-    public Pawn(String color) {
-                moves.add(2, 0);
-                moves.add({-2}{0});
-                moves.add({1, 1});
-                moves.add({1, 0});
-                moves.add({1, -1});
-                moves.add({-1, 1});
-                moves.add({-1, 0});
-                moves.add({-1, -1});
+    public Pawn(boolean color, ArrayList<Field> possibleMoves) {
         super(color);
+        this.possibleMoves = getPossibleMoves();
     }
 
     @Override
-    public ArrayList<int[][]> getPossibleMoves() {
-        if (isOnStartPosition() && color == black) {
-            possibleMoves
-        }
-        return null;
-    }
+    public ArrayList<Field> getPossibleMoves() {
+        possibleMoves.clear();
+        boolean isWhite = super.isWhite();
+        int dx = isWhite ? -1 : 1;
 
+        Field ahead = super.getPosition().getNeightbour(dx, 0);
+        if (ahead.getFigur() == null) {
+            possibleMoves.add(ahead);
+            if (super.getPosition().ROW == 6 && isWhite) {
+                Field aheadsecond = super.getPosition().getNeightbour(dx - 1, 0);
+                if (aheadsecond.getFigur() == null) {
+                    possibleMoves.add(aheadsecond);
+                }
+            } else if (super.getPosition().ROW == 1 && !isWhite) {
+                Field aheadsecond = super.getPosition().getNeightbour(dx + 1, 0);
+                if (aheadsecond.getFigur() == null) {
+                    possibleMoves.add(aheadsecond);
+                }
+            }
+        }
+        Field aheadLeft = super.getPosition().getNeightbour(dx, -1);
+        if (aheadLeft != null && aheadLeft.getFigur() != null && isOpponent(aheadLeft.getFigur())) {
+            possibleMoves.add(aheadLeft);
+        }
+        Field aheadRight = super.getPosition().getNeightbour(dx, 1);
+        if (aheadRight != null && aheadRight.getFigur() != null && isOpponent(aheadRight.getFigur())) {
+            possibleMoves.add(aheadRight);
+        }
+        return possibleMoves;
+    }
 }

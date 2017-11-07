@@ -1,15 +1,17 @@
 package core.figuren;
 
+import game.Field;
+
 import java.util.ArrayList;
 
 public class Knight extends Figur {
 
-    public Knight(String color) {
-        super(color);
+    public Knight(boolean isWhite) {
+        super(isWhite);
     }
 
     @Override
-    public ArrayList<int[][]> getPossibleMoves() {
+    public ArrayList<Field> getPossibleMoves() {
         return null;
     }
 }

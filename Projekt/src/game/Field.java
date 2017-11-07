@@ -4,20 +4,18 @@ import core.figuren.Figur;
 
 public class Field {
 
-    private String color;
+    public final int ROW;
+    public final int COLUMN;
     private Figur figur;
 
-    public Field(Figur figur, String color) {
-        this.figur = figur;
-        this.color = color;
+    public Field(int row, int column) {
+        ROW = row;
+        COLUMN = column;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public Field getNeightbour(int x, int y) {
 
-    public void setColor(String color) {
-        this.color = color;
+        return null;
     }
 
     public Figur getFigur() {
