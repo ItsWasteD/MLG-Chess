@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class Bishop extends Figur {
 
+
     public Bishop(boolean isWhite) {
         super(isWhite);
     }

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Queen extends Figur {
 
+
     public Queen(boolean isWhite) {
         super(isWhite);
     }

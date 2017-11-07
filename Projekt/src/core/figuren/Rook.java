@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class Rook extends Figur {
 
+
     public Rook(boolean isWhite) {
         super(isWhite);
     }

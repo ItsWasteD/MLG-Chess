@@ -14,8 +14,14 @@ public class Field {
     }
 
     public Field getNeightbour(int x, int y) {
-
+        //TODO
         return null;
+    }
+
+    public Field getField(int x, int y) {
+        //TODO
+        return null;
+
     }
 
     public Figur getFigur() {

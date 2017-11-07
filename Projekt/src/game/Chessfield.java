@@ -2,7 +2,8 @@ package game;
 
 public class Chessfield {
 
-    private Field[][] field = new Field[8][8];
+    public final static int SIZE = 8;
+    private Field[][] field = new Field[SIZE][SIZE];
 
     public Chessfield() {
         creatDefaultField();

@@ -1,6 +1,7 @@
 package api.figur;
 
 import core.figuren.Figur;
+import game.Field;
 
 public class FigurService {
 
@@ -10,14 +11,13 @@ public class FigurService {
         this.figurController = figurController;
     }
 
-    private void moveFigur(Figur figur, int x, int y) {
-        figurController.movefigur(figur, x, y);
+    private void moveFigur(Figur figur, Field field) {
+
+        figurController.movefigur(figur, field);
     }
 
     private void deleteFigur(Figur figur) {
-
-
+        figur.kill();
     }
-
 
 }

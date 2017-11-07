@@ -31,8 +31,8 @@ public abstract class Figur {
         return isDead;
     }
 
-    public void setDead(boolean dead) {
-        isDead = dead;
+    public void kill() {
+        isDead = true;
     }
 
     public Field getPosition() {
