@@ -1,0 +1,6 @@
+.roundButton{
+
+    -fx-border-radius: 1000 1000 1000 1000;
+    -fx-background-radius: 1000 1000 1000 1000;
+
+}
