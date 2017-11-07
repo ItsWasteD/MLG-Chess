@@ -23,10 +23,6 @@ public abstract class Figur {
         return isWhite;
     }
 
-    public void setWhite(boolean isWhite) {
-        this.isWhite = isWhite;
-    }
-
     public boolean isDead() {
         return isDead;
     }

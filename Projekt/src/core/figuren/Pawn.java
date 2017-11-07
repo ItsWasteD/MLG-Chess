@@ -18,9 +18,9 @@ public class Pawn extends Figur {
         boolean isWhite = super.isWhite();
         int dx = isWhite ? -1 : 1;
 
-        Field ahead = super.getPosition().getNeightbour(dx, 0);
-        if (ahead.getFigur() == null) {
-            possibleMoves.add(ahead);
+        Field fieldAhead = super.getPosition().getNeightbour(dx, 0);
+        if (fieldAhead.getFigur() == null) {
+            possibleMoves.add(fieldAhead);
             if (super.getPosition().ROW == 6 && isWhite) {
                 Field aheadsecond = super.getPosition().getNeightbour(dx - 1, 0);
                 if (aheadsecond.getFigur() == null) {
@@ -33,13 +33,13 @@ public class Pawn extends Figur {
                 }
             }
         }
-        Field aheadLeft = super.getPosition().getNeightbour(dx, -1);
-        if (aheadLeft != null && aheadLeft.getFigur() != null && isOpponent(aheadLeft.getFigur())) {
-            possibleMoves.add(aheadLeft);
+        Field fieldAheadLeft = super.getPosition().getNeightbour(dx, -1);
+        if (fieldAheadLeft != null && fieldAheadLeft.getFigur() != null && isOpponent(fieldAheadLeft.getFigur())) {
+            possibleMoves.add(fieldAheadLeft);
         }
-        Field aheadRight = super.getPosition().getNeightbour(dx, 1);
-        if (aheadRight != null && aheadRight.getFigur() != null && isOpponent(aheadRight.getFigur())) {
-            possibleMoves.add(aheadRight);
+        Field fieldAheadRight = super.getPosition().getNeightbour(dx, 1);
+        if (fieldAheadRight != null && fieldAheadRight.getFigur() != null && isOpponent(fieldAheadRight.getFigur())) {
+            possibleMoves.add(fieldAheadRight);
         }
         return possibleMoves;
     }

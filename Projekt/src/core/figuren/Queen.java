@@ -18,9 +18,9 @@ public class Queen extends Figur {
                 new Rook(isWhite()),
                 new Bishop(isWhite())
         };
-        for (Figur piece : figures) {
-            piece.setPosition(getPosition());
-            possibleMoves.addAll(piece.getPossibleMoves());
+        for (Figur figur : figures) {
+            figur.setPosition(getPosition());
+            possibleMoves.addAll(figur.getPossibleMoves());
         }
         return possibleMoves;
     }

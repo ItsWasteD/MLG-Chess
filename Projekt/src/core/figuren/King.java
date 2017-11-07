@@ -27,9 +27,9 @@ public class King extends Figur {
                 {1, -1}
         };
         for (int[] o : offsets) {
-            Field square = super.getPosition().getNeightbour(o[0], o[1]);
-            if (square != null && (square.getFigur() == null || isOpponent(square.getFigur()))) {
-                moves.add(square);
+            Field field = super.getPosition().getNeightbour(o[0], o[1]);
+            if (field != null && (field.getFigur() == null || isOpponent(field.getFigur()))) {
+                moves.add(field);
             }
         }
         possibleMoves.addAll(moves);
