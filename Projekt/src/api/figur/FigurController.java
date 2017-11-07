@@ -11,6 +11,7 @@ public class FigurController {
     }
 
     public void deleteFigur(Figur figur) {
-
+        figur.kill();
+        figur.getPosition().setFigur(null);
     }
 }
