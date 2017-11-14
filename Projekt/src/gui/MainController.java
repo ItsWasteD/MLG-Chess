@@ -1,5 +1,6 @@
 package gui;
 
+import api.game.GameController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -48,5 +49,9 @@ public class MainController implements Initializable {
         Scene scene = new Scene(root);
 
         Main.getStage().setScene(scene);
+    }
+
+    public void startGame(ActionEvent actionEvent) {
+        GameController gc = new GameController();
     }
 }
