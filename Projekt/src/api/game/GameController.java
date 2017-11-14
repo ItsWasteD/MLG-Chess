@@ -1,7 +1,7 @@
 package api.game;
 
-import game.Chessfield;
-import game.Field;
+import game.java.Chessfield;
+import game.java.Field;
 
 public class GameController {
 
