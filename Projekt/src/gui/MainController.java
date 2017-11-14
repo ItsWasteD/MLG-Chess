@@ -29,7 +29,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        File f = new File("Projekt\\src\\gui\\photo.jpg");
+        File f = new File("Projekt\\src\\gui\\images\\face.jpg");
 
         Image image = new Image(f.toURI().toString(),true);
         imgView.setImage(image);
