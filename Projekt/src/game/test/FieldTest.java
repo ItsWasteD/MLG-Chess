@@ -18,4 +18,6 @@ public class FieldTest {
         Assert.assertNotNull(Chessfield.getChessfield());
     }
 
+
+
 }
