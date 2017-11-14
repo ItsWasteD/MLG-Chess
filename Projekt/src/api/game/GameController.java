@@ -11,9 +11,16 @@ public class GameController {
 
     }
 
+
+
     public boolean startGame() {
         Chessfield cf = new Chessfield();
         Field[][] chessfield = Chessfield.getChessfield();
+/*
+        for(Fiel : chessfield);{
+
+        }*/
+
 
         return true;
     }
