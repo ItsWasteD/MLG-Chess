@@ -2,7 +2,8 @@ package game.java;
 
 import core.figuren.Figur;
 
-public class Field {
+public class
+Field {
 
     public final int ROW;
     public final int COLUMN;

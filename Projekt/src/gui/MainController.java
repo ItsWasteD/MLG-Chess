@@ -51,7 +51,13 @@ public class MainController implements Initializable {
         Main.getStage().setScene(scene);
     }
 
-    public void startGame(ActionEvent actionEvent) {
+    public void startGame(ActionEvent actionEvent) throws IOException {
         GameController gc = new GameController();
+
+        Parent root = FXMLLoader.load(getClass().getResource("Game.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Main.getStage().setScene(scene);
     }
 }
