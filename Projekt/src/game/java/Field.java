@@ -28,12 +28,4 @@ public class Field {
     public void setFigur(Figur figur) {
         this.figur = figur;
     }
-
-    public int getROW() {
-        return ROW;
-    }
-
-    public int getCOLUMN() {
-        return COLUMN;
-    }
 }
