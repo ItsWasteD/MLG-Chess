@@ -1,4 +1,4 @@
-package game;
+package game.java;
 
 import core.figuren.*;
 
@@ -9,6 +9,18 @@ public class Chessfield {
 
     public Chessfield() {
         creatDefaultField();
+    }
+
+    public static Field[][] getChessfield() {
+        return Chessfield.field;
+    }
+
+    public static void setChessfield(Field[][] field) {
+        Chessfield.field = field;
+    }
+
+    public static Field getSingleField(int x, int y) {
+        return Chessfield.field[x][y];
     }
 
     private void creatDefaultField() {
@@ -36,17 +48,9 @@ public class Chessfield {
     private void createEmptyField() {
         for (int y = 0; y < 8; y++) {
             for (int x = 0; x < 8; x++) {
-                this.field[y][x] = new Field(x, y);
+                field[y][x] = new Field(x, y);
             }
         }
-    }
-
-    public static Field[][] getField() {
-        return Chessfield.field;
-    }
-
-    public static void setField(Field[][] field) {
-        Chessfield.field = field;
     }
 
 }

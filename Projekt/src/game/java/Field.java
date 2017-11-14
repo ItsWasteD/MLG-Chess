@@ -1,4 +1,4 @@
-package game;
+package game.java;
 
 import core.figuren.Figur;
 
@@ -14,14 +14,11 @@ public class Field {
     }
 
     public Field getNeightbour(int x, int y) {
-        //TODO
-        return null;
+        return Chessfield.getSingleField(this.COLUMN + x, this.ROW + y);
     }
 
     public Field getField(int x, int y) {
-        //TODO
-        return null;
-
+        return Chessfield.getSingleField(x, y);
     }
 
     public Figur getFigur() {
@@ -30,5 +27,13 @@ public class Field {
 
     public void setFigur(Figur figur) {
         this.figur = figur;
+    }
+
+    public int getROW() {
+        return ROW;
+    }
+
+    public int getCOLUMN() {
+        return COLUMN;
     }
 }
