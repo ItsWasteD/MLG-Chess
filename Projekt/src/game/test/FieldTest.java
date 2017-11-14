@@ -1,5 +1,6 @@
 package game.test;
 
+
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
