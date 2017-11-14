@@ -35,7 +35,7 @@ public class Chessfield {
     private void createEmptyField() {
         for (int y = 0; y < 8; y++) {
             for (int x = 0; x < 8; x++) {
-                this.field[y][x] = (x + y) % 2 == 0 ? new Field(x, y) : new Field(x, y);
+                this.field[y][x] = new Field(x, y);
             }
         }
     }
