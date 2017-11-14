@@ -3,7 +3,7 @@ package game;
 public class Chessfield {
 
     public final static int SIZE = 8;
-    private Field[][] field = new Field[SIZE][SIZE];
+    private static Field[][] field = new Field[SIZE][SIZE];
 
     public Chessfield() {
         creatDefaultField();
@@ -35,17 +35,17 @@ public class Chessfield {
     private void createEmptyField() {
         for (int y = 0; y < 8; y++) {
             for (int x = 0; x < 8; x++) {
-                this.field[y][x] = (x + y) % 2 == 0 ? new Field(x, y) : new Field(x, y);
+                Chessfield.field[y][x] = (x + y) % 2 == 0 ? new Field(x, y) : new Field(x, y);
             }
         }
     }
 
-    public Field[][] getField() {
-        return field;
+    public static Field[][] getField() {
+        return Chessfield.field;
     }
 
-    public void setField(Field[][] field) {
-        this.field = field;
+    public static void setField(Field[][] field) {
+        Chessfield.field = field;
     }
 
 }
