@@ -8,7 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -52,12 +55,16 @@ public class MainController implements Initializable {
     }
 
     public void startGame(ActionEvent actionEvent) throws IOException {
-        GameController gc = new GameController();
 
         Parent root = FXMLLoader.load(getClass().getResource("Game.fxml"));
 
         Scene scene = new Scene(root);
 
         Main.getStage().setScene(scene);
+    }
+
+    public void doStuff(MouseEvent mouseEvent) {
+
+        JOptionPane.showMessageDialog(null, "Such WOW. You cool", "MLG", JOptionPane.OK_CANCEL_OPTION);
     }
 }

@@ -2,29 +2,72 @@ package api.game;
 
 import game.java.Chessfield;
 import game.java.Field;
+import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
 
-public class GameController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    public GameController() {
-
-
-
-    }
-
+public class GameController implements Initializable {
 
 
-    public boolean startGame() {
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
         Chessfield cf = new Chessfield();
         Field[][] chessfield = Chessfield.getChessfield();
-/*
-        for(Fiel : chessfield);{
 
-        }*/
+/*        // simple displays ImageView the image as is
+        ImageView iv1 = new ImageView();
+        iv1.setImage(image);
+
+        // resizes the image to have width of 100 while preserving the ratio and using
+        // higher quality filtering method; this ImageView is also cached to
+        // improve performance
+        ImageView iv2 = new ImageView();
+        iv2.setImage(image);
+        iv2.setFitWidth(100);
+        iv2.setPreserveRatio(true);
+        iv2.setSmooth(true);
+        iv2.setCache(true);
+
+        // defines a viewport into the source image (achieving a "zoom" effect) and
+        // displays it rotated
+        ImageView iv3 = new ImageView();
+        iv3.setImage(image);
+        Rectangle2D viewportRect = new Rectangle2D(40, 35, 110, 110);
+        iv3.setViewport(viewportRect);
+        iv3.setRotate(90);
+
+        Group root = new Group();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.BLACK);
+        HBox box = new HBox();
+        box.getChildren().add(iv1);
+        box.getChildren().add(iv2);
+        box.getChildren().add(iv3);
+        root.getChildren().add(box);
+
+        stage.setTitle("ImageView");
+        stage.setWidth(415);
+        stage.setHeight(200);
+        stage.setScene(scene);
+        stage.sizeToScene();
+        stage.show();*/
 
 
-        return true;
+        for(Field[] field : chessfield){
+
+            for (Field realField : field){
+                System.out.println(realField.ROW + " " + realField.COLUMN);
+            }
+
+        }
+
+
     }
-
-
 
 }
