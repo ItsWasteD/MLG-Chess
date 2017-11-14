@@ -1,7 +1,7 @@
 package api.figur;
 
 import core.figuren.Figur;
-import game.java.Field;
+import game.Field;
 
 public class FigurController {
 

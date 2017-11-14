@@ -1,6 +1,6 @@
 package api.game;
 
-import game.java.Field;
+import game.Field;
 
 
 public class ChessfieldRepository {

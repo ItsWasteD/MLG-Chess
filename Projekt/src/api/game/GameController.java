@@ -13,7 +13,7 @@ public class GameController {
 
     public boolean startGame() {
         Chessfield cf = new Chessfield();
-        Field[][] chessfield = Chessfield.getField();
+        Field[][] chessfield = Chessfield.getChessfield();
 
         return true;
     }

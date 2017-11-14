@@ -67,4 +67,7 @@ public class CustomizeController implements Initializable {
         Image image = new Image(f.toURI().toString(),true);
         imgFigure.setImage(image);
     }
+
+
+
 }
