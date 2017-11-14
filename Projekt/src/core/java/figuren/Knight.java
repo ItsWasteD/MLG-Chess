@@ -1,4 +1,4 @@
-package core.figuren;
+package core.java.figuren;
 
 import game.java.Field;
 
@@ -9,6 +9,8 @@ public class Knight extends Figur {
 
     public Knight(boolean isWhite) {
         super(isWhite);
+
+        possibleMoves = new ArrayList<>();
     }
 
     @Override

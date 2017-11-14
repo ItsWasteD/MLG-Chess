@@ -1,4 +1,4 @@
-package core.figuren;
+package core.java.figuren;
 
 import game.java.Field;
 
@@ -10,6 +10,7 @@ public class Pawn extends Figur {
 
     public Pawn(boolean isWhite) {
         super(isWhite);
+        possibleMoves = new ArrayList<>();
     }
 
     @Override
