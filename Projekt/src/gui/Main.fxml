@@ -19,6 +19,6 @@
       </Button>
       <Button cancelButton="true" layoutX="225.0" layoutY="271.0" mnemonicParsing="false" onAction="#quit" prefHeight="37.0" prefWidth="151.0" text="Quit" />
       <Button fx:id="btnInfo" layoutX="24.0" layoutY="353.0" mnemonicParsing="false" onAction="#changeInfo" prefHeight="25.0" prefWidth="27.0" styleClass="roundButton" stylesheets="@style.css" text="?" />
-      <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#doStuff" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
