@@ -14,14 +14,8 @@ public class FieldTest {
     }
 
     @Test
-    public void testGetSingleField() {
-        Assert.assertEquals(Chessfield.getChessfield()[0][0], Chessfield.getSingleField(0, 0));
+    public void getNeightbour_NOTNULL() throws Exception {
+        Assert.assertNotNull(Chessfield.getChessfield());
     }
 
-    @Test
-    public void testGetNeightbour() throws Exception {
-        Chessfield.getSingleField(1, 2).getNeightbour(1, 2);
-        Assert.assertEquals(Chessfield.getSingleField(1, 2).getNeightbour(1, 0),
-                Chessfield.getSingleField(2, 2));
-    }
 }
