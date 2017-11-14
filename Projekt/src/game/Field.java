@@ -1,4 +1,4 @@
-package game.java;
+package game;
 
 import core.figuren.Figur;
 

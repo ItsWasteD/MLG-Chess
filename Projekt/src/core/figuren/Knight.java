@@ -1,6 +1,6 @@
 package core.figuren;
 
-import game.java.Field;
+import game.Field;
 
 import java.util.ArrayList;
 

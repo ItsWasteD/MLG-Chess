@@ -1,7 +1,7 @@
 package core.figuren;
 
-import game.java.Chessfield;
-import game.java.Field;
+import game.Chessfield;
+import game.Field;
 
 import java.util.ArrayList;
 
