@@ -12,7 +12,6 @@ public class FigurService {
     }
 
     private void moveFigur(Figur figur, Field field) {
-
         figurController.movefigur(figur, field);
     }
 
