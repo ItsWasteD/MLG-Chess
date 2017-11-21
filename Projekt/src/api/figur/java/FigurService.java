@@ -1,4 +1,4 @@
-package api.figur;
+package api.figur.java;
 
 import core.java.figuren.Figur;
 import game.java.Field;

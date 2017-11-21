@@ -29,6 +29,7 @@ public abstract class Figur {
 
     public void kill() {
         isDead = true;
+        position.setFigur(null);
     }
 
     public Field getPosition() {

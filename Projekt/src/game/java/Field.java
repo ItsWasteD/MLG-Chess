@@ -16,7 +16,10 @@ Field {
     }
 
     public Field getNeightbour(int row, int column) {
-        return Chessfield.getSingleField(this.ROW + row, this.COLUMN + column);
+        if (row < 8 && row >= 0 && column < 8 && column >= 0) {
+            return Chessfield.getSingleField(this.ROW + row, this.COLUMN + column);
+        }
+        return null;
     }
 
     public Field getField(int y, int x) {
@@ -29,5 +32,8 @@ Field {
 
     public void setFigur(Figur figur) {
         this.figur = figur;
+        if (figur != null) {
+            figur.setPosition(this);
+        }
     }
 }
