@@ -1,6 +1,6 @@
 package api.figur;
 
-import core.figuren.Figur;
+import core.java.figuren.Figur;
 import game.java.Field;
 
 public class FigurController {

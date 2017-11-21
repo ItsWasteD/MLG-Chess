@@ -1,4 +1,4 @@
-package core.figuren;
+package core.java.figuren;
 
 import game.java.Chessfield;
 import game.java.Field;
@@ -10,6 +10,7 @@ public class Rook extends Figur {
 
     public Rook(boolean isWhite) {
         super(isWhite);
+        possibleMoves = new ArrayList<>();
     }
 
     @Override

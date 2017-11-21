@@ -1,6 +1,6 @@
 package game.java;
 
-import core.figuren.Figur;
+import core.java.figuren.Figur;
 
 public class
 Field {
@@ -9,13 +9,14 @@ Field {
     public final int COLUMN;
     private Figur figur;
 
-    public Field(int row, int column) {
+    public Field(int column, int row) {
         ROW = row;
         COLUMN = column;
+        setFigur(null);
     }
 
-    public Field getNeightbour(int x, int y) {
-        return Chessfield.getSingleField(this.COLUMN + x, this.ROW + y);
+    public Field getNeightbour(int row, int column) {
+        return Chessfield.getSingleField(this.ROW + row, this.COLUMN + column);
     }
 
     public Field getField(int x, int y) {
