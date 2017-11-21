@@ -19,7 +19,7 @@ public class RookTest {
 
     @Test
     public void testGetPossibleMovesStraigthLine() {
-        Chessfield.getSingleField(0, 0).getFigur().kill();
+        Chessfield.getSingleField(1, 0).setFigur(null);
         Assert.assertEquals(6, Chessfield.getSingleField(0, 0).getFigur().getPossibleMoves().size());
     }
 

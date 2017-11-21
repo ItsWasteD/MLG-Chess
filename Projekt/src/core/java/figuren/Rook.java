@@ -26,7 +26,7 @@ public class Rook extends Figur {
             } else if (isOpponent(field.getFigur())) {
                 possibleMoves.add(field);
                 break;
-            } else {
+            } else if (field.getFigur() != null) {
                 break;
             }
         }
@@ -38,7 +38,7 @@ public class Rook extends Figur {
             } else if (isOpponent(field.getFigur())) {
                 possibleMoves.add(field);
                 break;
-            } else {
+            } else if (field.getFigur() != null) {
                 break;
             }
         }
@@ -50,7 +50,7 @@ public class Rook extends Figur {
             } else if (isOpponent(field.getFigur())) {
                 possibleMoves.add(field);
                 break;
-            } else {
+            } else if (field.getFigur() != null) {
                 break;
             }
         }
@@ -62,7 +62,7 @@ public class Rook extends Figur {
             } else if (isOpponent(field.getFigur())) {
                 possibleMoves.add(field);
                 break;
-            } else {
+            } else if (field.getFigur() != null) {
                 break;
             }
         }
