@@ -2,21 +2,20 @@ package api.database;
 
 import api.database.model.User;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.xml.crypto.Data;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Database {
 
-    private static final String USERS_DATABASE_URL = "https://mlgchess-c56b.restdb.io/rest/mlgchess-users";
+    private static final String USERS_TABLE_URL = "https://mlgchess-c56b.restdb.io/rest/mlgchess-users";
     private static final String API_KEY = "100c710f86ffef8c45e0c9f0186c7652dce74";
 
-    public static User[] getAllUsers() {
+    public User[] getAllUsers() {
         try {
-            URL url = new URL(USERS_DATABASE_URL);
+            URL url = new URL(USERS_TABLE_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("x-apikey",API_KEY);
@@ -42,6 +41,30 @@ public class Database {
         }
 
         return null;
+    }
+
+    public void insertUser(User user) {
+        try {
+            URL url = new URL(USERS_TABLE_URL);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("x-apikey",API_KEY);
+            conn.setRequestProperty("content-type", "application/json");
+            conn.setRequestProperty("cache-control", "no-cache");
+            conn.setDoOutput(true);
+            OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
+
+            out.write("{ \"username\": \"" + user.getUsername() + "\", \"password\": \"" + user.getPassword() + "\"}");
+            out.flush();
+            out.close();
+
+            System.out.println(conn.getResponseCode());
+
+        } catch (MalformedURLException urlEx) {
+            urlEx.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
 }
