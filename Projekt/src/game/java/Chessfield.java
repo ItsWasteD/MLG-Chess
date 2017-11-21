@@ -25,8 +25,8 @@ public class Chessfield {
         field[7][0].setFigur(new Rook(true));
         field[7][1].setFigur(new Knight(true));
         field[7][2].setFigur(new Bishop(true));
-        field[7][3].setFigur(new King(true));
-        field[7][4].setFigur(new Queen(true));
+        field[7][3].setFigur(new Queen(true));
+        field[7][4].setFigur(new King(true));
         field[7][5].setFigur(new Bishop(true));
         field[7][6].setFigur(new Knight(true));
         field[7][7].setFigur(new Rook(true));
@@ -37,8 +37,8 @@ public class Chessfield {
         field[0][0].setFigur(new Rook(false));
         field[0][1].setFigur(new Knight(false));
         field[0][2].setFigur(new Bishop(false));
-        field[0][3].setFigur(new King(false));
-        field[0][4].setFigur(new Queen(false));
+        field[0][3].setFigur(new Queen(false));
+        field[0][4].setFigur(new King(false));
         field[0][5].setFigur(new Bishop(false));
         field[0][6].setFigur(new Knight(false));
         field[0][7].setFigur(new Rook(false));

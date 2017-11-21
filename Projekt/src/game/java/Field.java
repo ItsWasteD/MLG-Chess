@@ -16,7 +16,7 @@ Field {
     }
 
     public Field getNeightbour(int row, int column) {
-        if (row < 8 && row >= 0 && column < 8 && column >= 0) {
+        if (this.ROW + row < 8 && this.ROW + row >= 0 && this.COLUMN + column < 8 && this.COLUMN + column >= 0) {
             return Chessfield.getSingleField(this.ROW + row, this.COLUMN + column);
         }
         return null;
