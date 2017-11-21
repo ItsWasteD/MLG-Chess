@@ -1,19 +1,23 @@
 package api.database;
 
 import api.database.model.User;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import javax.xml.crypto.Data;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
 
     private static final String USERS_TABLE_URL = "https://mlgchess-c56b.restdb.io/rest/mlgchess-users";
     private static final String API_KEY = "100c710f86ffef8c45e0c9f0186c7652dce74";
 
-    public User[] getAllUsers() {
+    public List<User> getAllUsers() {
         try {
             URL url = new URL(USERS_TABLE_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -30,9 +34,11 @@ public class Database {
                 result.append(line);
             }
 
-            System.out.println(result.toString());
+            List<User> users = parseJSON(result.toString());
 
             br.close();
+
+            return users;
 
         } catch (MalformedURLException urlEx) {
             urlEx.printStackTrace();
@@ -43,7 +49,7 @@ public class Database {
         return null;
     }
 
-    public void insertUser(User user) {
+    public int insertUser(User user) {
         try {
             URL url = new URL(USERS_TABLE_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -58,13 +64,29 @@ public class Database {
             out.flush();
             out.close();
 
-            System.out.println(conn.getResponseCode());
+            return conn.getResponseCode();
 
         } catch (MalformedURLException urlEx) {
             urlEx.printStackTrace();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+
+        return 0;
+    }
+
+    private List<User> parseJSON(String userString) {
+
+        JSONArray array = new JSONArray(userString);
+        List<User> users = new ArrayList<>();
+
+        for(int i = 0; i < array.length(); i++) {
+            JSONObject o = array.getJSONObject(i);
+            User u = new User(o.getString("username"), o.getString("password"));
+            users.add(u);
+        }
+
+        return users;
     }
 
 }
