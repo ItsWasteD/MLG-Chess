@@ -23,12 +23,36 @@ public class FigurControllerTest {
     }
 
     @Test
-    public void movefigur() throws Exception {
+    public void movePawn() throws Exception {
         Figur figur = Chessfield.getSingleField(1, 0).getFigur();
         possibleMoves = figur.getPossibleMoves();
-        figurController.movefigur(figur, possibleMoves.get(0));
-        Assert.assertEquals(Chessfield.getSingleField(3, 0).getFigur(), figur);
+        figurController.movefigur(figur, possibleMoves.get(1));
+        Assert.assertEquals(figur, Chessfield.getSingleField(3, 0).getFigur());
+    }
 
+    @Test
+    public void moveRook() throws Exception {
+        // TODO
+    }
+
+    @Test
+    public void moveKnight() throws Exception {
+        // TODO
+    }
+
+    @Test
+    public void moveBishop() throws Exception {
+        // TODO
+    }
+
+    @Test
+    public void moveQueen() throws Exception {
+        // TODO
+    }
+
+    @Test
+    public void moveKing() throws Exception {
+        // TODO
     }
 
     @Test

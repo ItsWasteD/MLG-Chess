@@ -7,8 +7,6 @@ import game.java.Field;
 public class FigurController {
 
     public void movefigur(Figur figur, Field field) {
-        field.setFigur(null);
-        figur.setPosition(null);
         Chessfield.getSingleField(field.ROW, field.COLUMN).setFigur(figur);
     }
 
