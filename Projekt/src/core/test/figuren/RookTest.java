@@ -9,12 +9,18 @@ public class RookTest {
 
     @Before
     public void setUp() {
-        Chessfield chessfield = new Chessfield();
+        new Chessfield();
     }
 
     @Test
     public void testGetPossibleMoves() {
         Assert.assertEquals(0, Chessfield.getSingleField(0, 0).getFigur().getPossibleMoves().size());
+    }
+
+    @Test
+    public void testGetPossibleMovesStraigthLine() {
+        Chessfield.getSingleField(0, 0).getFigur().kill();
+        Assert.assertEquals(6, Chessfield.getSingleField(0, 0).getFigur().getPossibleMoves().size());
     }
 
 }
