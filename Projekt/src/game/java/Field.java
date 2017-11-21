@@ -19,8 +19,8 @@ Field {
         return Chessfield.getSingleField(this.ROW + row, this.COLUMN + column);
     }
 
-    public Field getField(int x, int y) {
-        return Chessfield.getSingleField(x, y);
+    public Field getField(int y, int x) {
+        return Chessfield.getSingleField(y, x);
     }
 
     public Figur getFigur() {

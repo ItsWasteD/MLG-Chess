@@ -16,7 +16,7 @@ public class Chessfield {
     }
 
     public static Field getSingleField(int row, int column) {
-        return Chessfield.field[column][row];
+        return Chessfield.field[row][column];
     }
 
     private void creatDefaultField() {
@@ -31,7 +31,7 @@ public class Chessfield {
         field[7][6].setFigur(new Knight(true));
         field[7][7].setFigur(new Rook(true));
         for (int i = 0; i < 8; i++) {
-            field[i][6].setFigur(new Pawn(true));
+            field[6][i].setFigur(new Pawn(true));
         }
 
         field[0][0].setFigur(new Rook(false));
@@ -43,7 +43,7 @@ public class Chessfield {
         field[0][6].setFigur(new Knight(false));
         field[0][7].setFigur(new Rook(false));
         for (int i = 0; i < 8; i++) {
-            field[i][1].setFigur(new Pawn(false));
+            field[1][i].setFigur(new Pawn(false));
         }
         setFigures();
     }
