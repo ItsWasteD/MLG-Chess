@@ -41,7 +41,11 @@ public class FigurControllerTest {
 
     @Test
     public void moveKnight() throws Exception {
-        // TODO
+        Figur figur = Chessfield.getSingleField(0, 1).getFigur();
+        possibleMoves = figur.getPossibleMoves();
+        System.out.println(possibleMoves);
+        figurController.movefigur(figur, possibleMoves.get(1));
+        Assert.assertEquals(figur, Chessfield.getSingleField(2, 0).getFigur());
     }
 
     @Test

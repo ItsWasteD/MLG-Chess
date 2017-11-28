@@ -27,7 +27,7 @@ public class Knight extends Figur {
                 {-2, -1}
         };
         for (int[] o : offsets) {
-            Field field = super.getPosition().getField(o[0], o[1]);
+            Field field = super.getPosition().getNeightbour(o[0], o[1]);
             if (field != null && (field.getFigur() == null || isOpponent(field.getFigur()))) {
                 possibleMoves.add(field);
             }

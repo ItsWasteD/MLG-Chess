@@ -15,19 +15,19 @@ public class KnightTest {
 
     @Test
     public void testGetPossibleMoves() {
-        Assert.assertEquals(2, Chessfield.getSingleField(1,0).getFigur().getPossibleMoves().size());
+        Assert.assertEquals(2, Chessfield.getSingleField(0, 1).getFigur().getPossibleMoves().size());
     }
 
     @Test
     public void testGetPossibleMovesWithOpponent() {
         Chessfield.getSingleField(2, 2).setFigur(new Pawn(true));
-        Assert.assertEquals(2, Chessfield.getSingleField(1, 0).getFigur().getPossibleMoves().size());
+        Assert.assertEquals(2, Chessfield.getSingleField(0, 1).getFigur().getPossibleMoves().size());
     }
 
     @Test
     public void testGetPossibleMovesWithManyOpponent() {
         Chessfield.getSingleField(2, 2).setFigur(new Pawn(true));
         Chessfield.getSingleField(0, 2).setFigur(new Pawn(true));
-        Assert.assertEquals(2, Chessfield.getSingleField(1, 0).getFigur().getPossibleMoves().size());
+        Assert.assertEquals(2, Chessfield.getSingleField(0, 1).getFigur().getPossibleMoves().size());
     }
 }
