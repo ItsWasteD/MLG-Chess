@@ -2,13 +2,26 @@ package game.java;
 
 import core.java.figuren.*;
 
+/**
+ * This class is the Chessfield with functions like,
+ * {@link #createEmptyField()},
+ * {@link #createDefaultField()}.
+ *
+ * @author David Roth
+ * @version 1.0
+ */
 public class Chessfield {
 
     public final static int SIZE = 8;
     private static Field[][] field = new Field[SIZE][SIZE];
 
+    /**
+     * This is the default constructor of this class it creates a default {@link Chessfield}.
+     *
+     * @see #createDefaultField()
+     */
     public Chessfield() {
-        creatDefaultField();
+        createDefaultField();
     }
 
     public static Field[][] getChessfield() {
@@ -19,7 +32,14 @@ public class Chessfield {
         return Chessfield.field[row][column];
     }
 
-    private void creatDefaultField() {
+    /**
+     * This method creates the default {@link Chessfield}. It
+     * sets every {@link Field} to empty and then fills the {@link Field}'s like
+     * in a real Chessfield.
+     *
+     * @see Field
+     */
+    private void createDefaultField() {
 
         createEmptyField();
         field[7][0].setFigur(new Rook(true));
@@ -48,6 +68,11 @@ public class Chessfield {
         setFigures();
     }
 
+    /**
+     * This method creates the empty {@link Chessfield}.
+     *
+     * @see Field
+     */
     private void createEmptyField() {
         for (int y = 0; y < 8; y++) {
             for (int x = 0; x < 8; x++) {
@@ -56,6 +81,7 @@ public class Chessfield {
         }
     }
 
+    /******************************GETTER & SETTER**********************************************/
     private void setFigures() {
         for (Field[] fieldRow : field) {
             for (Field fieldColumn : fieldRow) {

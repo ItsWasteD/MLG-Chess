@@ -11,10 +11,24 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is a JUnit test for the {@link FigurController} class.
+ *
+ * @see org.junit.runners.JUnit4
+ *
+ * @author Yanis Weibel
+ * @version 1.0
+ */
+
 public class FigurControllerTest {
+
     private FigurController figurController;
     private List<Field> possibleMoves;
 
+    /**
+     * This method creates a new instance of the {@link api.figur.java.FigurController},
+     * a new {@link ArrayList} of {@link Field}'s and a {@link Chessfield}.
+     */
     @Before
     public void setUp() {
         figurController = new FigurController();
@@ -22,16 +36,22 @@ public class FigurControllerTest {
         new Chessfield();
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.Pawn} moves correctly.
+     */
     @Test
-    public void movePawn() throws Exception {
+    public void movePawn() {
         Figur figur = Chessfield.getSingleField(1, 0).getFigur();
         possibleMoves = figur.getPossibleMoves();
         figurController.movefigur(figur, possibleMoves.get(1));
         Assert.assertEquals(figur, Chessfield.getSingleField(3, 0).getFigur());
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.Rook} moves correctly.
+     */
     @Test
-    public void moveRook() throws Exception {
+    public void moveRook() {
         Figur figur = Chessfield.getSingleField(0, 0).getFigur();
         Chessfield.getSingleField(1, 0).getFigur().kill();
         possibleMoves = figur.getPossibleMoves();
@@ -39,16 +59,22 @@ public class FigurControllerTest {
         Assert.assertEquals(figur, Chessfield.getSingleField(3, 0).getFigur());
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.Knight} moves correctly.
+     */
     @Test
-    public void moveKnight() throws Exception {
+    public void moveKnight() {
         Figur figur = Chessfield.getSingleField(0, 1).getFigur();
         possibleMoves = figur.getPossibleMoves();
         figurController.movefigur(figur, possibleMoves.get(1));
         Assert.assertEquals(figur, Chessfield.getSingleField(2, 0).getFigur());
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.Bishop} moves correctly.
+     */
     @Test
-    public void moveBishop() throws Exception {
+    public void moveBishop() {
         Figur figur = Chessfield.getSingleField(0, 2).getFigur();
         Chessfield.getSingleField(1, 1).getFigur().kill();
         Chessfield.getSingleField(1, 3).getFigur().kill();
@@ -57,8 +83,11 @@ public class FigurControllerTest {
         Assert.assertEquals(figur, Chessfield.getSingleField(1, 1).getFigur());
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.Queen} moves correctly.
+     */
     @Test
-    public void moveQueen() throws Exception {
+    public void moveQueen() {
         Figur figur = Chessfield.getSingleField(0, 3).getFigur();
         Chessfield.getSingleField(1, 2).getFigur().kill();
         Chessfield.getSingleField(1, 3).getFigur().kill();
@@ -68,8 +97,11 @@ public class FigurControllerTest {
         Assert.assertEquals(figur, Chessfield.getSingleField(6, 3).getFigur());
     }
 
+    /**
+     * This test method checks if the {@link core.java.figuren.King} moves correctly.
+     */
     @Test
-    public void moveKing() throws Exception {
+    public void moveKing() {
         Figur figur = Chessfield.getSingleField(0, 4).getFigur();
         Chessfield.getSingleField(1, 3).getFigur().kill();
         Chessfield.getSingleField(1, 4).getFigur().kill();

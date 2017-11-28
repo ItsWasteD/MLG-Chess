@@ -5,15 +5,36 @@ import game.java.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is a subclass of {@link Figur} and contains functions for the chess game.
+ *
+ * @see #getPossibleMoves()
+ *
+ * @author Yanis Weibel
+ * @version 1.0
+ */
+
 public class King extends Figur {
 
-
+    /**
+     * This is the default constructor of the {@link King}.
+     *
+     * @param isWhite a <tt>boolean</tt> to see if the {@link Figur} is white or not.
+     *
+     * @see Figur#isWhite
+     */
     public King(boolean isWhite) {
         super(isWhite);
 
         possibleMoves = new ArrayList<>();
     }
 
+    /**
+     * This method calculates the possible moves for the specific {@link Figur} in this case
+     * the {@link King}.
+     *
+     * @return a {@link java.util.List} of {@link Field}'s possible to move to.
+     */
     @Override
     public ArrayList<Field> getPossibleMoves() {
         possibleMoves.clear();

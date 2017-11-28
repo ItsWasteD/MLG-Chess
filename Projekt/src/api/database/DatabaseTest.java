@@ -10,12 +10,30 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * This class is a JUnit test for the database class.
+ *
+ * @see org.junit.runners.JUnit4
+ * @see Database
+ *
+ * @author David Roth
+ * @version 1.0
+ */
+
 public class DatabaseTest {
 
     private Database db;
     private User user;
 
     private List<User> usersTest = new ArrayList<>();
+
+    /**
+     * The setup method creates a new instance of the database class.
+     * It also creates a new user and add's some users to the {@link #usersTest} list.
+     *
+     * @see User
+     * @see Database
+     */
 
     @Before
     public void setup() {
@@ -28,6 +46,13 @@ public class DatabaseTest {
 
     }
 
+    /**
+     * The {@link #getAllUsersTest()} tests if the data gets transmitted successfully
+     * and if it is still the same.
+     *
+     * @see Database#getAllUsers()
+     */
+
     @Test
     public void getAllUsersTest() {
         List<User> users = db.getAllUsers();
@@ -39,6 +64,16 @@ public class DatabaseTest {
             Assert.assertEquals(u, uTest);
         }
     }
+
+    /**
+     * This method inserts the user created in {@link #setup()} and checks if it returns the correct response code.
+     *
+     * Response Code
+     * 200: OK
+     * 201: Created
+     *
+     * @see Database#insertUser(User)
+     */
 
     @Test
     public void insertDbTest() {
