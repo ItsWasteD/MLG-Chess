@@ -9,9 +9,4 @@ public class FigurController {
     public void movefigur(Figur figur, Field field) {
         Chessfield.getSingleField(field.ROW, field.COLUMN).setFigur(figur);
     }
-
-    public void deleteFigur(Figur figur) {
-        figur.kill();
-        figur.getPosition().setFigur(null);
-    }
 }

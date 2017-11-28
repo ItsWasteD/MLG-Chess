@@ -20,7 +20,7 @@ public class QueenTest {
 
     @Test
     public void testGetPossibleMovesStraigthLine() {
-        Chessfield.getSingleField(1, 3).setFigur(null);
+        Chessfield.getSingleField(1, 3).getFigur().kill();
         Assert.assertEquals(6, Chessfield.getSingleField(0, 3).getFigur().getPossibleMoves().size());
     }
 
