@@ -1,11 +1,9 @@
 package gui;
 
-import api.database.Database;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -17,9 +15,13 @@ public class Main extends Application {
         launch(args);
     }
 
+    public static Stage getStage() {
+        return primaryStage;
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        this.primaryStage = primaryStage;
+        Main.primaryStage = primaryStage;
 
         primaryStage.setTitle("MLG Chess");
 
@@ -28,9 +30,5 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static Stage getStage(){
-        return primaryStage;
     }
 }
