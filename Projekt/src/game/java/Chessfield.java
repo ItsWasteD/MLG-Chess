@@ -1,6 +1,6 @@
 package game.java;
 
-import core.java.figuren.*;
+import core.figuren.java.*;
 
 /**
  * This class is the Chessfield with functions like,

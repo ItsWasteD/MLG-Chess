@@ -1,14 +1,13 @@
-package api.database;
+package api.database.test;
 
-import api.database.model.User;
+import api.database.java.Database;
+import api.database.model.java.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * This class is a JUnit test for the database class.

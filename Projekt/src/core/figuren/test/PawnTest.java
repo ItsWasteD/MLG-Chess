@@ -1,16 +1,16 @@
-package core.test.figuren;
+package core.figuren.test;
 
-import core.java.figuren.Pawn;
+import core.figuren.java.Pawn;
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * This class is a JUnit test for the {@link core.java.figuren.Pawn} class.
+ * This class is a JUnit test for the {@link Pawn} class.
  *
  * @see org.junit.runners.JUnit4
- * @see core.java.figuren.Pawn
+ * @see Pawn
  *
  * @author Yanis Weibel
  * @version 1.0
@@ -27,7 +27,7 @@ public class PawnTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Pawn}.
+     * of moves for {@link Pawn}.
      */
     @Test
     public void testGetPossibleMoves() {
@@ -36,7 +36,7 @@ public class PawnTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Pawn} with opponent in front.
+     * of moves for {@link Pawn} with opponent in front.
      */
     @Test
     public void testGetPossibleMovesWithOpponent() {
@@ -46,7 +46,7 @@ public class PawnTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Pawn} if many opponents are in the front.
+     * of moves for {@link Pawn} if many opponents are in the front.
      */
     @Test
     public void testGetPossibleMovesWithManyOpponent() {
@@ -58,7 +58,7 @@ public class PawnTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Pawn} if an enemy is in the front.
+     * of moves for {@link Pawn} if an enemy is in the front.
      */
     @Test
     public void testGetPossibleMovesWithOpponentAhead() {

@@ -1,6 +1,7 @@
-package api.database;
+package api.database.java;
 
-import api.database.model.User;
+import api.database.model.java.User;
+import api.database.test.DatabaseTest;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

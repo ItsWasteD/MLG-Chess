@@ -1,16 +1,17 @@
-package core.test.figuren;
+package core.figuren.test;
 
-import core.java.figuren.Pawn;
+import core.figuren.java.Knight;
+import core.figuren.java.Pawn;
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * This class is a JUnit test for the {@link core.java.figuren.Knight} class.
+ * This class is a JUnit test for the {@link Knight} class.
  *
  * @see org.junit.runners.JUnit4
- * @see core.java.figuren.Knight
+ * @see Knight
  *
  * @author Yanis Weibel
  * @version 1.0
@@ -27,7 +28,7 @@ public class KnightTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Knight}.
+     * of moves for {@link Knight}.
      */
     @Test
     public void testGetPossibleMoves() {
@@ -36,7 +37,7 @@ public class KnightTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Knight} when moving diagonal.
+     * of moves for {@link Knight} when moving diagonal.
      */
     @Test
     public void testGetPossibleMovesWithOpponent() {
@@ -46,7 +47,7 @@ public class KnightTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Knight} if an enemy is in the front.
+     * of moves for {@link Knight} if an enemy is in the front.
      */
     @Test
     public void testGetPossibleMovesWithManyOpponent() {

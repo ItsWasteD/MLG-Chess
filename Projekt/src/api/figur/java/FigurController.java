@@ -1,6 +1,6 @@
 package api.figur.java;
 
-import core.java.figuren.Figur;
+import core.figuren.java.Figur;
 import game.java.Chessfield;
 import game.java.Field;
 

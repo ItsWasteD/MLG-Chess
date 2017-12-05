@@ -1,4 +1,4 @@
-package core.test.figuren;
+package core.figuren.test;
 
 public class FigurTest {
 

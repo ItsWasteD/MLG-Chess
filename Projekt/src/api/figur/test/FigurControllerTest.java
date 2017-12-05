@@ -1,7 +1,7 @@
 package api.figur.test;
 
 import api.figur.java.FigurController;
-import core.java.figuren.Figur;
+import core.figuren.java.*;
 import game.java.Chessfield;
 import game.java.Field;
 import org.junit.Assert;
@@ -37,7 +37,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.Pawn} moves correctly.
+     * This test method checks if the {@link Pawn} moves correctly.
      */
     @Test
     public void movePawn() {
@@ -48,7 +48,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.Rook} moves correctly.
+     * This test method checks if the {@link Rook} moves correctly.
      */
     @Test
     public void moveRook() {
@@ -60,7 +60,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.Knight} moves correctly.
+     * This test method checks if the {@link Knight} moves correctly.
      */
     @Test
     public void moveKnight() {
@@ -71,7 +71,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.Bishop} moves correctly.
+     * This test method checks if the {@link Bishop} moves correctly.
      */
     @Test
     public void moveBishop() {
@@ -84,7 +84,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.Queen} moves correctly.
+     * This test method checks if the {@link Queen} moves correctly.
      */
     @Test
     public void moveQueen() {
@@ -98,7 +98,7 @@ public class FigurControllerTest {
     }
 
     /**
-     * This test method checks if the {@link core.java.figuren.King} moves correctly.
+     * This test method checks if the {@link King} moves correctly.
      */
     @Test
     public void moveKing() {

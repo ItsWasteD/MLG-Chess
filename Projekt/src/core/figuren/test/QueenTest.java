@@ -1,16 +1,17 @@
-package core.test.figuren;
+package core.figuren.test;
 
-import core.java.figuren.Pawn;
+import core.figuren.java.Pawn;
+import core.figuren.java.Queen;
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * This class is a JUnit test for the {@link core.java.figuren.Queen} class.
+ * This class is a JUnit test for the {@link Queen} class.
  *
  * @see org.junit.runners.JUnit4
- * @see core.java.figuren.Queen
+ * @see Queen
  *
  * @author Yanis Weibel
  * @version 1.0
@@ -27,7 +28,7 @@ public class QueenTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Queen}.
+     * of moves for {@link Queen}.
      */
     @Test
     public void testGetPossibleMoves() {
@@ -36,7 +37,7 @@ public class QueenTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Queen}.
+     * of moves for {@link Queen}.
      */
     @Test
     public void testGetPossibleMovesStraigthLine() {
@@ -46,7 +47,7 @@ public class QueenTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Queen} when moving diagonal.
+     * of moves for {@link Queen} when moving diagonal.
      */
     @Test
     public void testGetPossibleMovesDiagonal() {
@@ -57,7 +58,7 @@ public class QueenTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Queen} if an enemy is in the front.
+     * of moves for {@link Queen} if an enemy is in the front.
      */
     @Test
     public void testGetPossibleMovesStraigthLineWithEnemys() {

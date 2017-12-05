@@ -1,16 +1,17 @@
-package core.test.figuren;
+package core.figuren.test;
 
-import core.java.figuren.Pawn;
+import core.figuren.java.Bishop;
+import core.figuren.java.Pawn;
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * This class is a JUnit test for the {@link core.java.figuren.Bishop} class.
+ * This class is a JUnit test for the {@link Bishop} class.
  *
  * @see org.junit.runners.JUnit4
- * @see core.java.figuren.Bishop
+ * @see Bishop
  *
  * @author Yanis Weibel
  * @version 1.0
@@ -27,7 +28,7 @@ public class BishopTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Bishop}.
+     * of moves for {@link Bishop}.
      */
     @Test
     public void testGetPossibleMoves() {
@@ -36,7 +37,7 @@ public class BishopTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Bishop} when moving diagonal.
+     * of moves for {@link Bishop} when moving diagonal.
      */
     @Test
     public void testGetPossibleMovesDiagonal() {
@@ -47,7 +48,7 @@ public class BishopTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.Bishop} if an enemy is in the front.
+     * of moves for {@link Bishop} if an enemy is in the front.
      */
     @Test
     public void testGetPossibleMovesStraigthLineWithEnemys() {

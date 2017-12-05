@@ -1,6 +1,6 @@
 package game.java;
 
-import core.java.figuren.Figur;
+import core.figuren.java.Figur;
 
 /**
  * This class represents a {@link Field} it is used by the {@link Chessfield}.

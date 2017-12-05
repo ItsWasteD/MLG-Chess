@@ -1,16 +1,17 @@
-package core.test.figuren;
+package core.figuren.test;
 
-import core.java.figuren.Pawn;
+import core.figuren.java.King;
+import core.figuren.java.Pawn;
 import game.java.Chessfield;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * This class is a JUnit test for the {@link core.java.figuren.King} class.
+ * This class is a JUnit test for the {@link King} class.
  *
  * @see org.junit.runners.JUnit4
- * @see core.java.figuren.King
+ * @see King
  *
  * @author Yanis Weibel
  * @version 1.0
@@ -27,7 +28,7 @@ public class KingTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.King}.
+     * of moves for {@link King}.
      */
     @Test
     public void testGetPossibleMoves() {
@@ -36,7 +37,7 @@ public class KingTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.King} when moving diagonal.
+     * of moves for {@link King} when moving diagonal.
      */
     @Test
     public void testGetPossibleMovesDiagonal() {
@@ -48,7 +49,7 @@ public class KingTest {
 
     /**
      * This method tests, if the Figur#getPossibleMoves function returns the correct number
-     * of moves for {@link core.java.figuren.King} if an enemy is in the front.
+     * of moves for {@link King} if an enemy is in the front.
      */
     @Test
     public void testGetPossibleMovesStraigthLineWithEnemys() {

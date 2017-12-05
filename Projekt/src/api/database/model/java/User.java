@@ -1,4 +1,4 @@
-package api.database.model;
+package api.database.model.java;
 
 /**
  * This class is a simple database model for a user.
