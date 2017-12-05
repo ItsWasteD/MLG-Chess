@@ -12,6 +12,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +68,40 @@ public class Database {
             br.close();
 
             return users;
+
+        } catch (MalformedURLException urlEx) {
+            urlEx.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public User getUserByUsername(String name) {
+        try {
+            String params = "?q={\"username\":\"" + name + "\"}";
+
+            URL url = new URL(USERS_TABLE_URL + params);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("x-apikey",API_KEY);
+            conn.setRequestProperty("cache-control", "no-cache");
+            conn.setRequestProperty("Content-Type", "application/json");
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+            String line;
+            StringBuilder sb = new StringBuilder();
+            while((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+
+            List<User> users = parseJSON(sb.toString());
+
+            br.close();
+
+            return users.get(0);
 
         } catch (MalformedURLException urlEx) {
             urlEx.printStackTrace();

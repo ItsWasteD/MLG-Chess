@@ -81,4 +81,16 @@ public class DatabaseTest {
         Assert.assertEquals(responseCode, 200 | 201);
     }
 
+    /**
+     * This method test if it can get a {@link User} from by username from the database.
+     */
+
+    @Test
+    public void getUserByUsernameTest() {
+        User u = db.getUserByUsername(usersTest.get(0).getUsername());
+
+        Assert.assertEquals(u.getUsername(), "yanis");
+        Assert.assertEquals(u.getPassword(), "1234");
+    }
+
 }
