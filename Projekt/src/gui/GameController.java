@@ -1,7 +1,5 @@
 package gui;
 
-import core.java.figuren.Bishop;
-import core.java.figuren.Figur;
 import game.java.Chessfield;
 import game.java.Field;
 import gui.Main;

@@ -1,30 +1,21 @@
 package gui;
 
-import core.java.figuren.*;
+import core.figuren.java.*;
 import game.java.Chessfield;
 import game.java.Field;
-import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.effect.BlendMode;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 
 import javax.swing.*;
-import java.awt.font.ImageGraphicAttribute;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
